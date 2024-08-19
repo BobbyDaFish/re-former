@@ -1,0 +1,10 @@
+<h1>Edit User Form</h1>
+<%= form_with model: @user, method: "patch" do |form| %>
+  <%= label(:user, :username) %>
+  <%= form.text_field :username, value: "Choose your Username" %>
+  <%= label(:user, :email) %>
+  <%= form.text_field :email, value: "example@email.com" %>
+  <%= label(:user, :password) %>
+  <%= password_field(:user, :password) %>
+  <%= form.submit %>
+<% end %>
